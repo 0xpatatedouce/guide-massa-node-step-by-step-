@@ -49,6 +49,9 @@ cd massa
 ```
 git checkout MAIN.2.1
 ```
+In this step, we will enter your IP address into the node and open the ports so that the node can communicate with other nodes:
+
+Firstly enter your IP address with this command :
 ```
 cd massa-node/config
 ```                                                                              
@@ -56,6 +59,7 @@ cd massa-node/config
 nano config.toml
 ```
 ```
+Replace the letter "AAA.BBB.CCC.DDD" with your address IP : 
 [protocol]
 routable_ip = "AAA.BBB.CCC.DDD"
 ```
