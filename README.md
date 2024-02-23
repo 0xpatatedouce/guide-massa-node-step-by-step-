@@ -65,6 +65,7 @@ routable_ip = "AAA.BBB.CCC.DDD"
 ```
 ![massa ip](https://github.com/0xpatatedouce/guide-massa-node-step-by-step-/assets/123324096/538cddcd-5f87-4027-8d86-7492d003929b)
 
+Now open the ports to let your node communicate with the others nodes
 ```
 apt install ufw -y 
 ufw allow ssh 
