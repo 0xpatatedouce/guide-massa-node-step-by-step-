@@ -60,6 +60,7 @@ nano config.toml
 ```
 ```
 Replace the letter "AAA.BBB.CCC.DDD" with your address IP : 
+
 [protocol]
 routable_ip = "AAA.BBB.CCC.DDD"
 ```
