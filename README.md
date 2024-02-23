@@ -1,4 +1,4 @@
-# guide-massa-node-step-by-step
+# Step-by-step-massa-node
 If you follow this guide, you will be able to independently run and monitor your own Massa node:
 
 
@@ -102,10 +102,11 @@ cd $home
 ```
 cd massa/massa-client/
 ```
-open a second screen for compiled the client 
+open a second screen to compiled the client 
 ```
 screen -S massa_client
 ```
+replace the <PASSWORD> with your own password
 ```
 cargo run --release -- -p <PASSWORD>
 ```
