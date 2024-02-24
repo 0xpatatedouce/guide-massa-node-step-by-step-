@@ -2,7 +2,7 @@
 If you follow this guide, you will be able to independently run and monitor your own Massa node:
 
 
-I will use Ubuntu for this guide, you need Ubuntu 20.04 and higher and a computer with 8 cores, 16 GB RAM, 1TB disk and a decent internet connection. On your local machine or you can also use a cloud VPS (Virtual Private Servers) like Contabo, AWS, Hetzner...
+I will use Ubuntu for this guide, you need Ubuntu 20.04 and higher, a computer with 8 cores, 16 GB RAM, 1TB disk and a decent internet connection. On your local machine or you can also use a cloud VPS (Virtual Private Servers) like Contabo, AWS, Hetzner...
 
 Now your computer/vps is ready, we are going to update/upgrade the apt command :
 
@@ -14,7 +14,7 @@ Install all of needed libraries in one command :
 ```
 sudo apt install pkg-config curl git build-essential libssl-dev libclang-dev cmake screen -y
 ```
-let's install rust :
+Let's install rust :
 
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -102,7 +102,7 @@ cd $home
 ```
 cd massa/massa-client/
 ```
-Open a second screen to compiled the client.
+Open a second screen to compile the client.
 ```
 screen -S massa_client
 ```
@@ -114,9 +114,14 @@ cargo run --release -- -p <PASSWORD>
 ![Capture d’écran 2024-02-20 201758](https://github.com/0xpatatedouce/guide-massa-node-step-by-step-/assets/123324096/7c714251-3b6c-40e3-b839-219913ac4547)
 
 Let's create a wallet with this command or you can import your wallet.
+Create a new wallet with this command:
 ```
 wallet_generate_secret_key
 ```
+Import your wallet with your seed phrase:
+
+wallet_add_secret_keys <your_secret_key>
+
 ```
 wallet_info
 ```
