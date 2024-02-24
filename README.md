@@ -85,7 +85,7 @@ cd $home
 cd massa/massa-node/
 ```
 
-Open the firts screen to boostrap your node 
+Open the first screen to boostrap your node 
 ```
 screen -S massa_node
 ```
@@ -95,7 +95,7 @@ RUST_BACKTRACE=full cargo run --release -- -p <PASSWORD> |& tee logs.txt
 ```
 ![Capture d’écran 2024-02-20 201502](https://github.com/0xpatatedouce/guide-massa-node-step-by-step-/assets/123324096/1887581e-4893-43bd-b7f3-260aa64e9765)
 
-if you have an outup like on the image, congratulations your node is running, press ctrl + a+d to quite the screen and come back to the root 
+if you have a result like on the image, congratulations your node is running, press ctrl + a+d to quite the screen and come back to the root 
 ```
 cd $home
 ```
