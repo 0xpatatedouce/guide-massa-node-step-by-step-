@@ -49,6 +49,7 @@ cd massa
 ```
 git checkout MAIN.2.1
 ```
+
 In this step, we will enter your IP address into the node and open the ports so that the node can communicate with other nodes:
 
 Firstly enter your IP address with this command :
@@ -89,23 +90,26 @@ Open the first screen to boostrap your node.
 ```
 screen -S massa_node
 ```
+
 You can run the node with the command below, replace < PASSWORD > with your own password.
 ```
 RUST_BACKTRACE=full cargo run --release -- -p <PASSWORD> |& tee logs.txt
 ```
 ![Capture d’écran 2024-02-20 201502](https://github.com/0xpatatedouce/guide-massa-node-step-by-step-/assets/123324096/1887581e-4893-43bd-b7f3-260aa64e9765)
 
-if you have a result like on the image, congratulations your node is running, press ctrl + a+d to quite the screen and come back to the root.
+If you have a result like on the image, congratulations your node is running, press ctrl + a+d to quite the screen and come back to the root.
 ```
 cd $home
 ```
 ```
 cd massa/massa-client/
 ```
+
 Open a second screen to compile the client.
 ```
 screen -S massa_client
 ```
+
 Replace the < PASSWORD > with your own password.
 ```
 cargo run --release -- -p <PASSWORD>
@@ -114,29 +118,46 @@ cargo run --release -- -p <PASSWORD>
 ![Capture d’écran 2024-02-20 201758](https://github.com/0xpatatedouce/guide-massa-node-step-by-step-/assets/123324096/7c714251-3b6c-40e3-b839-219913ac4547)
 
 Let's create a wallet with this command or you can import your wallet.
+
 Create a new wallet with this command:
 ```
 wallet_generate_secret_key
 ```
+
 Import your wallet with your seed phrase:
 
 wallet_add_secret_keys <your_secret_key>
 
+
+Check your wallet address with this command:
 ```
 wallet_info
 ```
+
+Now begin your stake by buying some rolls and telling your node to stake
+You need at least 100mas or 1roll (100mas =1 roll), type this command with your address, the number of rolls you want stake and the fee (you can put 0):
 ```
 buy_rolls <address> <roll count> <fee>
 ```
+
+Tell to your node to stake with this command: 
 ```
 node_start_staking <your_address>
 ```
+
+After waiting 1h40, your roll become active and you're staking, now you be part of the massa network, congratulations!
+
+If need to update your node type this two commands: 
 ```
 git fetch
 ```
 ```
 git checkout MAIN.2.1
 ```
+
+Some useful links :
+
+
 https://github.com/massalabs/massa/wiki/Monitoring-scripts-and-commands
 
 https://medium.com/@securisas/security-best-practices-si-vous-lancez-un-node-validateur-99f44b520f84
