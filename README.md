@@ -59,7 +59,7 @@ cd massa-node/config
 nano config.toml
 ```
 
-
+Replace the letters "AAA.BBB.CCC.DDD" with own address IP: 
 ```
 [protocol]
 routable_ip = "AAA.BBB.CCC.DDD"
