@@ -58,15 +58,15 @@ cd massa-node/config
 ```
 nano config.toml
 ```
-```
-Replace the letter "AAA.BBB.CCC.DDD" with your address IP : 
 
+
+```
 [protocol]
 routable_ip = "AAA.BBB.CCC.DDD"
 ```
 ![massa ip](https://github.com/0xpatatedouce/guide-massa-node-step-by-step-/assets/123324096/538cddcd-5f87-4027-8d86-7492d003929b)
 
-Now open the ports to let your node communicate with the others nodes
+Now open the ports to let your node communicate with the others nodes.
 ```
 apt install ufw -y 
 ufw allow ssh 
@@ -77,7 +77,7 @@ ufw allow 31245
 ufw enable
 ```
 
-come back to the root
+Come back to the root.
 ```
 cd $home
 ```
@@ -85,34 +85,35 @@ cd $home
 cd massa/massa-node/
 ```
 
-Open the first screen to boostrap your node 
+Open the first screen to boostrap your node.
 ```
 screen -S massa_node
 ```
-you can run the node woth the command below, replace < PASSWORD > with your own password
+You can run the node with the command below, replace < PASSWORD > with your own password.
 ```
 RUST_BACKTRACE=full cargo run --release -- -p <PASSWORD> |& tee logs.txt
 ```
 ![Capture d’écran 2024-02-20 201502](https://github.com/0xpatatedouce/guide-massa-node-step-by-step-/assets/123324096/1887581e-4893-43bd-b7f3-260aa64e9765)
 
-if you have a result like on the image, congratulations your node is running, press ctrl + a+d to quite the screen and come back to the root 
+if you have a result like on the image, congratulations your node is running, press ctrl + a+d to quite the screen and come back to the root.
 ```
 cd $home
 ```
 ```
 cd massa/massa-client/
 ```
-open a second screen to compiled the client 
+Open a second screen to compiled the client.
 ```
 screen -S massa_client
 ```
-replace the < PASSWORD > with your own password
+Replace the < PASSWORD > with your own password.
 ```
 cargo run --release -- -p <PASSWORD>
 ```
 
 ![Capture d’écran 2024-02-20 201758](https://github.com/0xpatatedouce/guide-massa-node-step-by-step-/assets/123324096/7c714251-3b6c-40e3-b839-219913ac4547)
 
+Let's create a wallet with this command or you can import your wallet.
 ```
 wallet_generate_secret_key
 ```
