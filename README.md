@@ -89,7 +89,7 @@ Open the first screen to boostrap your node
 ```
 screen -S massa_node
 ```
-you can run the node woth the command below, replace <PASSWORD> with your own password
+you can run the node woth the command below, replace < PASSWORD > with your own password
 ```
 RUST_BACKTRACE=full cargo run --release -- -p <PASSWORD> |& tee logs.txt
 ```
@@ -106,7 +106,7 @@ open a second screen to compiled the client
 ```
 screen -S massa_client
 ```
-replace the <PASSWORD> with your own password
+replace the < PASSWORD > with your own password
 ```
 cargo run --release -- -p <PASSWORD>
 ```
