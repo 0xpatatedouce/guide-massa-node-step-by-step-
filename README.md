@@ -125,9 +125,9 @@ wallet_generate_secret_key
 ```
 
 Import your wallet with your seed phrase:
-
+```
 wallet_add_secret_keys <your_secret_key>
-
+```
 
 Check your wallet address with this command:
 ```
@@ -159,7 +159,9 @@ Some useful links :
 
 
 https://github.com/massalabs/massa/wiki/Monitoring-scripts-and-commands
+
 Some good security practices: 
 https://medium.com/@securisas/security-best-practices-si-vous-lancez-un-node-validateur-99f44b520f84
+
 A telegram bot to monitor your node:
 https://github.com/dex2code/massa_acheta?tab=readme-ov-file
