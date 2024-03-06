@@ -71,7 +71,6 @@ Now open the ports to let your node communicate with the others nodes.
 ```
 apt install ufw -y 
 ufw allow ssh 
-ufw allow https 
 ufw allow http 
 ufw allow 31244
 ufw allow 31245
