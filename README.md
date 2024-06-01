@@ -47,7 +47,7 @@ Now your node is installed, go to the cloned repository and checkout the latest 
 cd massa
 ```
 ```
-git checkout MAIN.2.1
+git checkout MAIN.2.2
 ```
 
 In this step, we will enter your IP address into the node and open the ports so that the node can communicate with other nodes:
